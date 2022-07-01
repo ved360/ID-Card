@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Proof</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Goldman&family=Hurricane&family=Palette+Mosaic&family=Red+Hat+Mono:wght@300&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: url(https://www.adobe.com/express/learn/blog/media_1fbb098d1e0caaa882424b3a274330ac719a2c5d9.png?width=750&format=png&optimize=medium) no-repeat center center/cover;
+        }
+        .title{
+            font-family: 'Goldman', cursive;
+            padding: 100px;
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            /* border: 1px solid   #f1f1f1; */
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        /* Style the back side */
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title flex">
+        <h1>Hover over the IMAGE.</h1>
+    </div>
+    <div class="flex">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://lh3.googleusercontent.com/iWGJtLKji7S0islW4xI3mCNWP5189nNiK1SO6D-Ey7DmSNlUPnrCn5XderW0VQC0Kqnrpreh6jtrEJFJ37l0Enqs-apITcI0fc7tq6rrkEqF_J_tHu-cr0ptNySBdvZhUQnGXPZsxcZPJrl0Mz9BrKiFphAop5hCGbrTMjJ8-8pQKQBzqdhSEDvSI2Uxgx_isu-18ncoROWrv4KQYBFaNmo4bipY7W03z0OJtVJxm3ZEU6OFagn33usl_qhrdSVpjFRSbZSBHzxBTP7aUbtTDziltG0J_0b2BB859M-cfNi7TZ6n_8P--zo7G5GWCfGG-phXhf_o5AeSU36RUVRc5Ldh37eBhUGEj1IaoJQgFS2htUHZ6sq_3K1TCFjCEVyOBf4mptFlRG6wnBL7j9D3j2THlyATI9SiSituRzD7xHHvS1qVEfzC_72X8O4MfA8-3D3Q8BnYDkP4rLTrp7lDrHTKrgnc0PT15Tu62wnNiuUEswmflzOscmisG3SzU6HWFdD--T6URejwqYUGoGOPMjjiY0r1EDWFHtu2UllzdpTfhLE8Fl9WqnJAS6ncKmayMmJEpI-5zMRlB05EJp0f9TrUK8Z7EBuZtHIvDKllz-jKNE3ZJ0-GVXfRA3L_h8etK-zs-U4LN058chZHxXE-kL3PVctgEkJE7DFJgA8qevaGIX2dOeov-ih7iP89Uwe8UgC2saGDC_U3xk7WJyWFWupqvZy48pclUwFKN3rdP1edoVv_wzAVfcG9CAw=w1355-h903-no?authuser=0" alt="Avatar" style="width:300px;height:200px;">
+                </div>
+                <div class="flip-card-back">
+                    <img src="https://lh3.googleusercontent.com/x_UhzIddXP5Trwgi6udw9hJayMGE6K8a9Ap1kSpcFhFvz-9pgTbXN65wniRj7YtlrkQt2v0O_Xm8fHl7ksnOITMmk-G-ZVsc4dXzXXZERstX7sznpKACaTzxehKsU-yBuRatVu-MX3grDSiqCut7Q32OoAoo_qJt47MjbZMZ1UdCJ7ReOZDCNE7AB9ZN2Kik45tOv8UrgvEtGglCdXiZ8foxxJfvl202xiesQ2_KBdTgciBpsibn0urdED0oQAOGPfIIAL2ynPlDEyQMR7s0kniDsKfkw1LXXeYsKNEjTcWSkzpCjQVb3nYzub89blUdsfDEwgG63JW9o7aN1jYDG2O1bE3RM6EEOmB4yOdSYmHHrU6CWL_i2qjN4q3o2WknxkFpXuxOpAquaCb0qYt_dRCFpsLTkQTjAcLp89_x39S7Y2wnAnfrzXlplz42yKP-6GrLcuZs37Pa1wWNE2CP1fkWd3Ry6TrvGFEqQ0ARbOLzikLWXSYh4rpb3n9epG8c09mJBw1IrsJ7GkRFLYg-CmVYGRUrfYVqHyDhhREpSEE6OgX3fs2RW4C2myYJKw4r55vIYzDXJ_F8yITrlqruQtE0oE3OM3Rqo1EHmo3I7HKVmrwoxxVMplZvKibB7A3tlMvsw3lJmWf86RtwVFjp4UE96kIuXNLXVVnibbKrb4b0k-EaG3u_vQy7mTRUvFXgJ3DG_uWZGOxOOJpEvXJbtJPI0giZPfFZCGmR6KpykBeGQy0A765uRX_Fxpc=w1482-h903-no?authuser=0" alt="ID CArd" style="width:300px;height:200px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
